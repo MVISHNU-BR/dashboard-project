@@ -164,7 +164,7 @@ export default function Home() {
                       <div className="flex-shrink-0">
                         <Image className="" src="/avatar4.png" width={48} height={48} alt="User photo" />
                       </div>
-                      <div className="ml-4 mr-4">
+                      <div className="ml-4">
                         <p className="font-semibold text-base text-gray-800">Jenny Wilson</p>
                       </div>
                     </div>
@@ -207,30 +207,6 @@ export default function Home() {
                   </td>
                 </tr>
 
-                <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0">
-                        <Image className="" src="/avatar6.png" width={48} height={48} alt="User photo" />
-                      </div>
-                      <div className="ml-4">
-                        <p className="font-semibold text-base text-gray-800">Jacob Jones</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
-                    <span className="">245689</span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap ">
-                    <span className="text-base font-semibold text-gray-800">+$455,00</span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap ">
-                    <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
-                  </td>
-                </tr>
                 <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
