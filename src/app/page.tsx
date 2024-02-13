@@ -6,7 +6,7 @@ import App from "./components/App";
 export default function Home() {
   return (
     <main className="flex bg-gray-100">
-      <header className="w-29 h-screen fixed bg-primary text-white min-lg:hidden">
+      <header className="w-29 h-screen fixed bg-primary text-white">
 
         <div className="flex justify-center items-baseline mx-auto pt-11">
           <Image src="/logo.svg" width={47.27} height={40} alt="N Banking" />
@@ -57,7 +57,7 @@ export default function Home() {
 
           <div className="flex items-center gap-10">
 
-            <div className="w-12 h-12 flex items-center justify-center bg-blurblue rounded-full">
+            <div className="w-12 h-12 flex items-center justify-center bg-blurblue rounded-full hover:bg-blue-100">
               <Image className="" src="/bell.svg" width={24} height={24} alt="bell icon" />
               <span className="font-bold">3</span>
             </div>
@@ -71,11 +71,12 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="flex w-full ">
-          <div className="m-8 space-y-8">
+        <div className="flex flex-wrap lg:flex-nowrap w-full mt-8">
+
+          <div className="m-8 space-y-8 w-full md:w-full lg:w-100">
 
 
-            <div className="w-100 h-52 bg-white rounded-md">
+            <div className="min-w-100 h-52 bg-white rounded-md">
 
 
               <div className="flex items-center justify-between p-6">
@@ -91,7 +92,7 @@ export default function Home() {
               </div>
 
             </div>
-            <div className=" h-64 bg-white rounded-md">
+            <div className="min-w-100 h-64 bg-white rounded-md">
 
               <div className="flex justify-between px-4 py-4">
                 <h2 className="font-bold text-xl">Favourite Transfers</h2>
@@ -112,7 +113,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full h-105 mt-8 mr-8 p-6  bg-white rounded-md ">
+          <div className="w-full h-105 mt-8 mr-8 mb-8 p-6 ml-8 bg-white rounded-md lg:ml-0 lg-mb-0 ">
             <div className="flex items-center justify-between p-4">
               <h3 className="font-bold text-base">Insights</h3>
               <Image src="/more.svg" width={4} height={16} alt="more information" />
@@ -130,9 +131,9 @@ export default function Home() {
               <Image src="/more.svg" width={4} height={16} alt="more information" />
             </div>
 
-            <div className="">
-              <table className="min-w-full overflow-x-visible">
-                <thead className="bg-white">
+            <div className="overflow-auto box-border mb-8 rounded-xl">
+              <table className="min-w-full overflow-x-auto">
+                <thead className="bg-white overflow-x-visible">
                   <tr className="border-2 m-8 flex items-center justify-between rounded-xl">
                     <td scope="col" className="pl-12 py-3 text-left text-base font-semibold text-gray-800 ">
                       Name
@@ -151,14 +152,14 @@ export default function Home() {
                     </td>
                   </tr>
                 </thead>
-                <tbody className="bg-white rounded-xl">
+                <tbody className="bg-white rounded-xl overflow-visible">
                   <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0">
                           <Image className="" src="/avatar4.png" width={48} height={48} alt="User photo" />
                         </div>
-                        <div className="ml-4">
+                        <div className="ml-4 mr-4">
                           <p className="font-semibold text-base text-gray-800">Jenny Wilson</p>
                         </div>
                       </div>
@@ -201,6 +202,30 @@ export default function Home() {
                     </td>
                   </tr>
 
+                  <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0">
+                          <Image className="" src="/avatar6.png" width={48} height={48} alt="User photo" />
+                        </div>
+                        <div className="ml-4">
+                          <p className="font-semibold text-base text-gray-800">Jacob Jones</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
+                      <span className="">245689</span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap ">
+                      <span className="text-base font-semibold text-gray-800">+$455,00</span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap ">
+                      <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
+                    </td>
+                  </tr>
                   <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
