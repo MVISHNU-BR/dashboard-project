@@ -117,7 +117,7 @@ export default function Home() {
               <h3 className="font-bold text-base">Insights</h3>
               <Image src="/more.svg" width={4} height={16} alt="more information" />
             </div>
-            <div className="flex justify-center">
+            <div className="">
               <App />
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function Home() {
             </div>
 
             <div className="">
-              <table className="min-w-full ">
+              <table className="min-w-full overflow-x-visible">
                 <thead className="bg-white">
                   <tr className="border-2 m-8 flex items-center justify-between rounded-xl">
                     <td scope="col" className="pl-12 py-3 text-left text-base font-semibold text-gray-800 ">
