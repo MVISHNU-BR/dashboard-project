@@ -6,7 +6,7 @@ import App from "./components/App";
 export default function Home() {
   return (
     <main className="flex bg-gray-100">
-      <header className="w-29 h-screen bg-primary text-white min-lg:hidden">
+      <header className="w-29 h-screen fixed bg-primary text-white min-lg:hidden">
 
         <div className="flex justify-center items-baseline mx-auto pt-11">
           <Image src="/logo.svg" width={47.27} height={40} alt="N Banking" />
@@ -43,7 +43,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="w-full h-scren">
+      <section className="w-full h-scren ml-29">
 
         <section className="h-19 w-full flex justify-between px-8 border-b-2 bg-white border-gray-200">
           <div className="flex items-center">
