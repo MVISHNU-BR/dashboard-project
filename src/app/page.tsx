@@ -6,7 +6,7 @@ import App from "./components/App";
 export default function Home() {
   return (
     <main className="flex bg-gray-100">
-      <header className="w-29 h-screen fixed bg-primary text-white">
+      <header className="w-29 h-screen fixed bg-primary text-white invisible xl:visible">
 
         <div className="flex justify-center items-baseline mx-auto pt-11">
           <Image src="/logo.svg" width={47.27} height={40} alt="N Banking" />
@@ -43,11 +43,16 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="w-full h-scren ml-29">
+      <section className="w-full h-scren xl:ml-29">
 
         <section className="h-19 w-full flex justify-between px-8 border-b-2 bg-white border-gray-200">
           <div className="flex items-center">
             <div className="flex items-end gap-3">
+
+              <span className="visible xl:invisible" id="botao"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg>
+              </span>
 
               <h2 className="text-2xl text-gray-900 font-bold">Good Morning</h2>
               <Image src="/sun.svg" width={35} height={22} alt="Sun Icon" />
@@ -125,134 +130,134 @@ export default function Home() {
         </div>
 
         <div className="min-h-85 bg-white rounded-xl mx-8" >
-            
-            <div className="flex  justify-between px-6 py-4">
-              <h3 className="font-bold text-xl">Transaction</h3>
-              <Image src="/more.svg" width={4} height={16} alt="more information" />
-            </div>
 
-            <div className="overflow-auto box-border mb-8 rounded-xl">
-              <table className="min-w-full overflow-x-auto">
-                <thead className="bg-white overflow-x-visible">
-                  <tr className="border-2 m-8 flex items-center justify-between rounded-xl">
-                    <td scope="col" className="pl-12 py-3 text-left text-base font-semibold text-gray-800 ">
-                      Name
-                    </td>
-                    <td scope="col" className="pl-28 py-3 text-left text-base font-semibold text-gray-800 ">
-                      ID
-                    </td>
-                    <td scope="col" className="pl-12 py-3 text-left text-base font-semibold text-gray-800 ">
-                      Status
-                    </td>
-                    <td scope="col" className="px-12 py-3 text-left text-base font-semibold text-gray-800 ">
-                      Amount
-                    </td>
-                    <td scope="col" className="pr-12 py-3 text-left text-base font-semibold text-gray-800 ">
-                      Date
-                    </td>
-                  </tr>
-                </thead>
-                <tbody className="bg-white rounded-xl overflow-visible">
-                  <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0">
-                          <Image className="" src="/avatar4.png" width={48} height={48} alt="User photo" />
-                        </div>
-                        <div className="ml-4 mr-4">
-                          <p className="font-semibold text-base text-gray-800">Jenny Wilson</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
-                      <span className="">245689</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap ">
-                      <span className="text-base font-semibold text-gray-800">+$455,00</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap ">
-                      <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
-                    </td>
-                  </tr>
-                  <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0">
-                          <Image className="" src="/avatar5.png" width={48} height={48} alt="User photo" />
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-base text-gray-800">Robert Fox</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
-                      <span className="">245689</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap ">
-                      <span className="text-base font-semibold text-gray-800">+$455,00</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap ">
-                      <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
-                    </td>
-                  </tr>
+          <div className="flex  justify-between px-6 py-4">
+            <h3 className="font-bold text-xl">Transaction</h3>
+            <Image src="/more.svg" width={4} height={16} alt="more information" />
+          </div>
 
-                  <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0">
-                          <Image className="" src="/avatar6.png" width={48} height={48} alt="User photo" />
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-base text-gray-800">Jacob Jones</p>
-                        </div>
+          <div className="overflow-auto box-border mb-8 rounded-xl">
+            <table className="min-w-full overflow-x-auto">
+              <thead className="bg-white overflow-x-visible">
+                <tr className="border-2 m-8 flex items-center justify-between rounded-xl">
+                  <td scope="col" className="pl-12 py-3 text-left text-base font-semibold text-gray-800 ">
+                    Name
+                  </td>
+                  <td scope="col" className="pl-28 py-3 text-left text-base font-semibold text-gray-800 ">
+                    ID
+                  </td>
+                  <td scope="col" className="pl-12 py-3 text-left text-base font-semibold text-gray-800 ">
+                    Status
+                  </td>
+                  <td scope="col" className="px-12 py-3 text-left text-base font-semibold text-gray-800 ">
+                    Amount
+                  </td>
+                  <td scope="col" className="pr-12 py-3 text-left text-base font-semibold text-gray-800 ">
+                    Date
+                  </td>
+                </tr>
+              </thead>
+              <tbody className="bg-white rounded-xl overflow-visible">
+                <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">
+                        <Image className="" src="/avatar4.png" width={48} height={48} alt="User photo" />
                       </div>
-                    </td>
-                    <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
-                      <span className="">245689</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap ">
-                      <span className="text-base font-semibold text-gray-800">+$455,00</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap ">
-                      <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
-                    </td>
-                  </tr>
-                  <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0">
-                          <Image className="" src="/avatar6.png" width={48} height={48} alt="User photo" />
-                        </div>
-                        <div className="ml-4">
-                          <p className="font-semibold text-base text-gray-800">Jacob Jones</p>
-                        </div>
+                      <div className="ml-4 mr-4">
+                        <p className="font-semibold text-base text-gray-800">Jenny Wilson</p>
                       </div>
-                    </td>
-                    <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
-                      <span className="">245689</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap ">
-                      <span className="text-base font-semibold text-gray-800">+$455,00</span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap ">
-                      <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
+                    <span className="">245689</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap ">
+                    <span className="text-base font-semibold text-gray-800">+$455,00</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap ">
+                    <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
+                  </td>
+                </tr>
+                <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">
+                        <Image className="" src="/avatar5.png" width={48} height={48} alt="User photo" />
+                      </div>
+                      <div className="ml-4">
+                        <p className="font-semibold text-base text-gray-800">Robert Fox</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
+                    <span className="">245689</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap ">
+                    <span className="text-base font-semibold text-gray-800">+$455,00</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap ">
+                    <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
+                  </td>
+                </tr>
+
+                <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">
+                        <Image className="" src="/avatar6.png" width={48} height={48} alt="User photo" />
+                      </div>
+                      <div className="ml-4">
+                        <p className="font-semibold text-base text-gray-800">Jacob Jones</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
+                    <span className="">245689</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap ">
+                    <span className="text-base font-semibold text-gray-800">+$455,00</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap ">
+                    <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
+                  </td>
+                </tr>
+                <tr className="flex justify-between items-center border-2 mx-8 mb-4 rounded-xl">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">
+                        <Image className="" src="/avatar6.png" width={48} height={48} alt="User photo" />
+                      </div>
+                      <div className="ml-4">
+                        <p className="font-semibold text-base text-gray-800">Jacob Jones</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 font-semibold text-base text-gray-800 whitespace-nowrap">
+                    <span className="">245689</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="px-2 py-1 inline-flex text-base leading-5 font-semibold rounded-full bg-green-100 text-green-800">Complete</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap ">
+                    <span className="text-base font-semibold text-gray-800">+$455,00</span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap ">
+                    <span className="text-base font-semibold text-gray-800">20 Dec 2022</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>
