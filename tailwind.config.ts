@@ -28,6 +28,10 @@ const config: Config = {
         'blurblue': '#F9FBFF',
         'gray/200': '#EAECF0'
       },
+      fontFamily: {
+        'GilroyMedium': ['Gilroy-Medium', 'sans-serif'],
+        'Manrope': ['Manrope', 'sans-serif'],
+      }
     },
   },
   plugins: [],

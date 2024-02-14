@@ -5,29 +5,29 @@ import App from "./components/App";
 
 export default function Home() {
   return (
-    <main className="flex bg-gray-100">
+    <main className="flex bg-gray-100 font-Manrope">
       <header className="w-29 h-screen fixed bg-primary text-white invisible xl:visible">
 
         <div className="flex justify-center items-baseline mx-auto pt-11">
           <Image src="/logo.svg" width={47.27} height={40} alt="N Banking" />
-          <h2 className="px-0.5">Banking</h2>
+          <h2 className="px-0.5 text-sm md:text-base font-GilroyMedium">Banking</h2>
 
         </div>
         <nav className="">
           <div className="ml-4 mt-11 space-y-8 ">
-            <li className="flex items-center gap-3 bg-blue-600 rounded-l-lg px-3 h-12 ">
+            <li className="flex items-center gap-3 bg-blue-600 rounded-l-lg px-3 h-12 text-sm md:text-base">
               <Image src="/dashboard.svg" width={30} height={30} alt="" />
               <a href="#">Dashboard</a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-3 text-sm md:text-base">
               <Image src="/perfil.svg" width={30} height={30} alt="" />
               <a href="#">My Accounts</a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-3 text-sm md:text-base">
               <Image src="/cards.svg" width={30} height={30} alt="" />
               <a href="#">My Cards</a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-3 text-sm md:text-base">
               <Image src="/transfer.svg" width={30} height={30} alt="" />
               <a href="#">Fund Transfer</a>
             </li>
@@ -35,7 +35,7 @@ export default function Home() {
               <Image src="/paper.svg" width={30} height={30} alt="" />
               <a href="#">Bill Payment</a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-3 text-sm md:text-base">
               <Image src="/settings.svg" width={30} height={30} alt="" />
               <a href="#">Settings</a>
             </li>
@@ -43,7 +43,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="w-full h-scren xl:ml-29">
+      <section className="w-full h-scren xl:ml-29 ">
 
         <section className="h-19 w-full flex justify-between px-8 border-b-2 bg-white border-gray-200">
           <div className="flex items-center">
@@ -54,7 +54,7 @@ export default function Home() {
                 </svg>
               </span>
 
-              <h2 className="text-2xl text-gray-900 font-bold">Good Morning</h2>
+              <h2 className="text-base text-gray-900 font-bold hidden md:block  md:text-2xl">Good Morning</h2>
               <Image src="/sun.svg" width={35} height={22} alt="Sun Icon" />
 
             </div>
@@ -67,9 +67,9 @@ export default function Home() {
               <span className="font-bold">3</span>
             </div>
             <div className="flex items-center justify-center gap-3">
-              <Image className="" src="/avatar.png" width={48} height={48} alt="User photo" />
+              <Image className="hidden md:block" src="/avatar.png" width={48} height={48} alt="User photo" />
 
-              <h3 className="font-bold text-xl">Kathryn</h3>
+              <h3 className="font-bold text-base md:text-xl hidden md:block">Kathryn</h3>
 
               <Image src="/down-arrow.svg" width={24} height={24} alt="down arrow menu" />
             </div>
@@ -85,14 +85,14 @@ export default function Home() {
 
 
               <div className="flex items-center justify-between p-6">
-                <h3 className="font-bold text-xl">Balance</h3>
+                <h3 className="font-bold text-base md:text-xl">Balance</h3>
                 <Image src="/more.svg" width={4} height={16} alt="more information" />
               </div>
 
               <div className="backgroundDiv"></div>
 
               <div className="mt-4 pl-6 space-y-6">
-                <h2 className="font-bold text-4xl">$14,567.00 USD</h2>
+                <h2 className="font-bold text-xl md:text-3xl lg:text-4xl">$14,567.00 USD</h2>
                 <p className="font-semibold text-base">Available</p>
               </div>
 
@@ -100,18 +100,18 @@ export default function Home() {
             <div className="min-w-100 h-64 bg-white rounded-md">
 
               <div className="flex justify-between px-4 py-4">
-                <h2 className="font-bold text-xl">Favourite Transfers</h2>
-                <span className="font-normal text-sm py-">See All</span>
+                <h2 className="font-bold text-base   lg:text-xl">Favourite Transfers</h2>
+                <span className="font-normal text-sm md:text-base py-">See All</span>
               </div>
 
               <div className="space-y-7 px-6">
                 <div className=" flex items-center py-3 pl-5 gap-4 border-2 border-gray/200 rounded-md">
                   <Image className="" src="/avatar2.png" width={48} height={48} alt="User photo" />
-                  <span className="font-bold text-base">Kathryn Murphy</span>
+                  <span className="font-bold text-sm md:text-base">Kathryn Murphy</span>
                 </div>
                 <div className="flex items-center py-3 pl-5 gap-4 border-2 border-gray/200 rounded-md">
                   <Image className="" src="/avatar3.png" width={48} height={48} alt="User photo" />
-                  <span className="font-bold text-base">Wade Warren</span>
+                  <span className="font-bold text-sm md:text-base">Wade Warren</span>
                 </div>
 
               </div>
@@ -120,7 +120,7 @@ export default function Home() {
 
           <div className="w-full h-105 mt-8 mr-8 mb-8 p-6 ml-8 bg-white rounded-md lg:ml-0 lg-mb-0 ">
             <div className="flex items-center justify-between p-4">
-              <h3 className="font-bold text-base">Insights</h3>
+              <h3 className="font-bold sm:text-sm md:text-base">Insights</h3>
               <Image src="/more.svg" width={4} height={16} alt="more information" />
             </div>
             <div className="">
@@ -132,7 +132,7 @@ export default function Home() {
         <div className="min-h-85 bg-white rounded-xl mx-8" >
 
           <div className="flex  justify-between px-6 py-4">
-            <h3 className="font-bold text-xl">Transaction</h3>
+            <h3 className="font-bold text-base md:text-xl">Transaction</h3>
             <Image src="/more.svg" width={4} height={16} alt="more information" />
           </div>
 
