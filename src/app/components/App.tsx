@@ -24,16 +24,21 @@ export const options = {
   colors: ["#4D91FF", "#99C0FF"],
   isStacked: true,
   legend: { position: "top", alignment: "end" },
+  margin: "0",
+  chartArea: { width: "90%", height: "400px" },
+  
 };
 
 export default function App() {
   return (
-    <Chart
-      chartType="ColumnChart"
-      width="99%"
-      height="400px"
-      data={data}
-      options={options}
-    />
+
+      <Chart
+        chartType="ColumnChart"
+        width="100%"
+        height="400px"
+        data={data}
+        options={options}
+      />
+
   );
 }

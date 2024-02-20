@@ -1,32 +1,30 @@
-'use client';
-
+'use client'
 import Image from "next/image";
-import React, { useState } from "react";
 import App from "./components/App";
+import Menu from "./components/Menu";
 
-function fechaAi() {
-  const menuElement = document.getElementById("menu");
-  if (menuElement) {
-    menuElement.classList.add("invisible");
-    menuElement.classList.remove("absolute");
-  }
-}
+// function fechaAi() {
+//   const menuElement = document.getElementById("menu");
+//   if (menuElement) {
+//     menuElement.classList.add("invisible");
+//     menuElement.classList.remove("absolute");
+//   }
+// }
 
-function Menu() {
-  const menuElement = document.getElementById("menu");
-  if (menuElement) {
-    menuElement.classList.remove("invisible");
-    menuElement.classList.add("absolute");
-  }
-}
-
+// function Menu() {
+//   const menuElement = document.getElementById("menu");
+//   if (menuElement) {
+//     menuElement.classList.remove("invisible");
+//     menuElement.classList.add("fixed");
+//   }
+// }
 
 export default function Home() {
   return (
     <main className="flex bg-gray-100 font-Manrope">
-      <header className="w-29 h-screen fixed bg-primary text-white invisible xl:visible" id="menu" itemID="menu">
+      <header className="w-29 h-screen fixed bg-primary text-white invisible xl:visible z-10" id="menu" itemID="menu">
         <div className="">
-          <span className="text-xl m-4 absolute mt-4 xl:invisible" onClick={fechaAi}>x</span>
+          <span className="text-xl m-4 absolute mt-4 xl:invisible">x</span>
           <a href="#" className="flex justify-center items-baseline mx-auto pt-11">
             <Image src="/logo.svg" width={47.27} height={40} alt="N Banking" />
             <h2 className="px-0.5 text-sm md:text-base font-GilroyMedium">Banking</h2>
@@ -35,7 +33,7 @@ export default function Home() {
         <nav className="">
           <div className="ml-4 mt-11 space-y-6 ">
             <a href="#">
-              <li className=" flex items-center gap-3 bg-blue-600 rounded-l-lg px-3 h-12 text-sm md:text-base">
+              <li className=" flex items-center gap-3 bg-blue-600  hover:bg-blue-400 rounded-l-lg px-3 h-12 text-sm md:text-base">
                 <Image src="/dashboard.svg" width={30} height={30} alt="" />
                 Dashboard
               </li>
@@ -79,11 +77,14 @@ export default function Home() {
         <section className="h-19 w-full flex justify-between px-8 border-b-2 bg-white border-gray-200">
           <div className="flex items-center">
             <div className="flex items-end gap-3">
-              <button onClick={Menu} className="visible xl:invisible">
+              <div className="xl:hidden">
+                <Menu />
+              </div>
+              {/* <button onClick={Menu} className="visible xl:invisible">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                 </svg>
-              </button>
+              </button> */}
 
 
               <h2 className="text-base text-gray-900 font-bold hidden md:block  md:text-2xl">Good Morning</h2>
@@ -113,7 +114,7 @@ export default function Home() {
           <div className="m-8 space-y-8 w-full md:w-full lg:w-100">
 
 
-            <div className="min-w-100 h-52 bg-white rounded-md">
+            <div className="w-full md:min-w-100 h-52 bg-white rounded-md">
 
 
               <div className="flex items-center justify-between p-6">
@@ -131,7 +132,7 @@ export default function Home() {
               </div>
 
             </div>
-            <div className="min-w-100 h-64 bg-white rounded-md">
+            <div className="w-full md:min-w-100 h-64 bg-white rounded-md">
 
               <div className="flex justify-between px-4 py-4">
                 <h2 className="font-bold text-base   lg:text-xl">Favourite Transfers</h2>
@@ -160,7 +161,7 @@ export default function Home() {
                 <Image className="" src="/more.svg" width={4} height={16} alt="more information" />
               </a>
             </div>
-            <div className="">
+            <div className="z-0">
               <App />
             </div>
           </div>
